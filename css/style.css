@@ -308,7 +308,9 @@ ul {
   margin-bottom: 30px;
   margin-top: 0px;
 }
-.link-services {
+.link-services,
+.contact-form-button,
+.modal-form-btn-submit {
   background-color: var(--accent-color);
   min-width: 200px;
   min-height: 50px;
@@ -320,7 +322,6 @@ ul {
   line-height: 1.87;
   font-size: 16px;
   font-weight: 700;
-  padding-top: 10px;
 }
 
 .h3-advantages {
@@ -870,6 +871,7 @@ ul {
   transform: translateY(100%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+/*Модальное окно*/
 .backdrop {
   position: fixed;
   top: 0;
@@ -906,5 +908,159 @@ ul {
   display: flex;
   flex-direction: column;
   height: 581px;
+  width: 528px;
   box-sizing: border-box;
+}
+.modal-titel {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--primary-title-color);
+}
+.modal-form-data {
+  width: 448px;
+  height: 324px;
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-top: 28px;
+}
+.modal-form-name,
+.modal-form-tel,
+.modal-form-mail {
+  height: 40px;
+  width: 448px;
+  padding-left: 42px;
+}
+.modal-form-name:focus,
+.modal-form-tel:focus,
+.modal-form-mail:focus,
+.modal-form-comment:focus {
+  outline: none;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  border-radius: 4px;
+  border-color: var(--accent-color);
+  background-color: var(--primary-white-color);
+}
+.modal-form-name:focus + .modal-form-svg-icon {
+  fill: var(--accent-color);
+}
+.modal-form-tel:focus + .modal-form-svg-icon {
+  fill: var(--accent-color);
+}
+.modal-form-mail:focus + .modal-form-svg-icon {
+  fill: var(--accent-color);
+}
+.modal-form-comment {
+  resize: none;
+  width: 448px;
+}
+.modal-form-policy {
+  margin-top: 20px;
+}
+.modal-label {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+
+  color: #757575;
+}
+.link-modal-policy {
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  text-decoration-line: underline;
+  color: #2196f3;
+}
+.modal-form-btn-submit {
+  width: 200px;
+  height: 50px;
+  margin-left: 124px;
+  margin-top: 30px;
+  border: none;
+  margin-bottom: 40px;
+}
+.modal-form-svg-icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 12px;
+}
+.modal-form-field {
+  margin-left: 16px;
+  position: absolute;
+  top: 50%;
+  left: 30px;
+  transform: translateY(-50%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+/*.modal-form-field-wrapper {
+  position: relative;
+  display: block;
+}*/
+.modal-form-policy {
+  position: absolute;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px 1px 1px 1px);
+  padding: 0;
+  border: 0;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+.modal-label::before {
+  content: "";
+  width: 16px;
+  height: 15px;
+  outline: 1px solid var(--primary-title-color);
+  display: inline-block;
+  margin-right: 8px;
+}
+.bnt-close-modal {
+  background-image: ;
+}
+.modal-form-policy:checked + .modal-label::before {
+  background-image: url("../images/icon-check.svg");
+  background-color: var(--accent-color);
+  width: 16px;
+  height: 15px;
+  justify-content: center;
+}
+.modal-form-name:focus + .modal-form-field {
+  transform: translateY(-50px);
+}
+.form-field {
+  position: relative;
+  margin-bottom: 28px;
+}
+
+/*Форма обратной связи в футере*/
+.subscribe-modal-form {
+  margin-left: 94px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 570px;
+}
+.email-subscribe {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 16px;
+  width: 295px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  background-color: transparent;
+}
+.contact-form-button {
+  width: 200px;
+  height: 50px;
+  margin-left: 12px;
+  border: none;
 }
