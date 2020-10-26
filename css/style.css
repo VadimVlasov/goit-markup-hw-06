@@ -27,7 +27,9 @@ body {
 .header {
   align-items: center;
   height: 80px;
+  border-bottom: 1px solid #ececec;
 }
+
 .info.icon-mail {
   padding: 0px;
   border: none;
@@ -569,6 +571,7 @@ ul {
   padding-top: 72px;
 }
 .address {
+  display: inline-block;
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
@@ -584,7 +587,9 @@ ul {
   margin-right: 69px;
   margin-top: 66px;
   margin-bottom: 54px;
+  width: 231px;
 }
+
 .background-footer {
   background-color: #2f303a;
 }
@@ -928,35 +933,26 @@ ul {
   margin-right: 40px;
   margin-top: 28px;
 }
-.modal-form-name,
-.modal-form-tel,
-.modal-form-mail {
-  height: 40px;
+.modal-form-input {
   width: 448px;
   padding-left: 42px;
+  height: 40px;
 }
-.modal-form-name:focus,
-.modal-form-tel:focus,
-.modal-form-mail:focus,
-.modal-form-comment:focus {
+.modal-form-input:focus {
   outline: none;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   border-radius: 4px;
   border-color: var(--accent-color);
   background-color: var(--primary-white-color);
 }
-.modal-form-name:focus + .modal-form-svg-icon {
+.modal-form-input:focus + .modal-form-svg-icon {
   fill: var(--accent-color);
 }
-.modal-form-tel:focus + .modal-form-svg-icon {
-  fill: var(--accent-color);
-}
-.modal-form-mail:focus + .modal-form-svg-icon {
-  fill: var(--accent-color);
-}
-.modal-form-comment {
-  resize: none;
-  width: 448px;
+.comment-input {
+  height: 120px;
+  padding-top: 12px;
+  padding-left: 0px;
+  margin-left: 0px;
 }
 .modal-form-policy {
   margin-top: 20px;
@@ -1023,7 +1019,19 @@ ul {
   margin-right: 8px;
 }
 .bnt-close-modal {
-  background-image: ;
+  background: url("../images/close-black-18dp.svg") 50% 50% no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 18px;
+  height: 18px;
+  display: block;
+  text-align: center;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.bnt-close-modal:hover {
+  color: var(--accent-color);
 }
 .modal-form-policy:checked + .modal-label::before {
   background-image: url("../images/icon-check.svg");
@@ -1032,14 +1040,14 @@ ul {
   height: 15px;
   justify-content: center;
 }
-.modal-form-name:focus + .modal-form-field {
-  transform: translateY(-50px);
-}
 .form-field {
   position: relative;
   margin-bottom: 28px;
 }
-
+.modal-form-input:focus + .modal-form-field,
+.modal-form-input:not(:placeholder-shown) + .modal-form-field {
+  transform: translateY(-50px);
+}
 /*Форма обратной связи в футере*/
 .subscribe-modal-form {
   margin-left: 94px;
