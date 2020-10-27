@@ -925,18 +925,21 @@ ul {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--primary-title-color);
+  margin-top: 40px;
+  margin-bottom: 0px;
 }
 .modal-form-data {
   width: 448px;
   height: 324px;
   margin-left: 40px;
   margin-right: 40px;
-  margin-top: 28px;
+  margin-top: 12px;
 }
 .modal-form-input {
   width: 448px;
   padding-left: 42px;
   height: 40px;
+  margin-top: 4px;
 }
 .modal-form-input:focus {
   outline: none;
@@ -951,7 +954,7 @@ ul {
 .comment-input {
   height: 120px;
   padding-top: 12px;
-  padding-left: 0px;
+  padding-left: 16px;
   margin-left: 0px;
 }
 .modal-form-policy {
@@ -985,16 +988,10 @@ ul {
 .modal-form-svg-icon {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
   left: 12px;
 }
 .modal-form-field {
-  margin-left: 16px;
-  position: absolute;
-  top: 50%;
-  left: 30px;
-  transform: translateY(-50%);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  margin-bottom: 4px;
 }
 /*.modal-form-field-wrapper {
   position: relative;
@@ -1042,7 +1039,7 @@ ul {
 }
 .form-field {
   position: relative;
-  margin-bottom: 28px;
+  margin-bottom: 10px;
 }
 .modal-form-input:focus + .modal-form-field,
 .modal-form-input:not(:placeholder-shown) + .modal-form-field {
